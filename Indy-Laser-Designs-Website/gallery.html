@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="topnav.css" rel="stylesheet" type="text/css">
+  <link href="main.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Gallery</title>
+</head>
+
+<body>
+  <nav id="myTopnav" class="topnav">
+    <a class="logo-home" href="index.html">
+      <img src="/images/logo.png" class="logonav" alt="logo">
+    </a>
+    <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <ul>
+      <li><a class="navbtns" href="index.html">HOME</a></li>
+      <li><a class="navbtns" href="about-us.html">ABOUT US</a></li>
+      <li><a class="navbtns" href="gallery.html">GALLERY</a></li>
+      <li><a class="navbtns" href="pricing.html">PRICING</a></li>
+      <li><a class="navbtns" href="contact-us.html">CONTACT US</a></li>
+    </ul>
+    <script src="topnavmenu.js"></script>
+  </nav>
+  <div id="wrapper">
+    <main>
+      <h1>Gallery</h1>
+      <p>Here are some images, displaying some of what we have engraved.</p>
+      <div class="w3-content w3-display-container">
+        <img class="mySlides" src="/images/20210309_160619.jpg" style="width:100%" alt="">
+        <img class="mySlides" src="/images/20220112_141921.jpg" style="width:100%" alt="">
+        <img class="mySlides" src="/images/IMG_20190423_192748_059.jpg" style="width:100%" alt="">
+        <img class="mySlides" src="/images/20210117_151504.jpg" style="width:100%" alt="">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+
+      <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          x[slideIndex - 1].style.display = "block";
+        }
+      </script>
+
+
+    </main>
+  </div>
+  <footer>
+    <div id="footermain" style="padding-top: 45px;">
+      <div class="footersection spacer"></div>
+      <div class="footersection">
+        <h5>Contact Us</h5><br>
+        <a href="tel:317-313-7715">317-313-7715</a><br><a
+          href="mailto:info@indylaserdesigns.com">info@indylaserdesigns.com</a>
+      </div>
+      <div class="footersection">
+        <h5>Follow Us</h5><br>
+        <a href="https://www.facebook.com/IndyLaserDesigns" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/indylaserdesigns" class="fa fa-instagram"></a>
+        <a href="https://g.page/r/CUNmgRTOvEB4EA0" class="fa fa-google"></a>
+      </div>
+    </div>
+    <div id="copyright">
+      © 2022 Indy Laser Designs, Indianapolis, Indiana – All rights reserved.
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
